@@ -19,3 +19,12 @@ c. The container should expose the port 6379.
 
 Finally, redis-deployment should be in an up and running state.
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.
+
+
+<details>
+<summary>Heading</summary>
+    + markdown list 1
+        + nested list 1
+        + nested list 2
+    + markdown list 2
+</details>
