@@ -23,7 +23,11 @@ Note: The kubectl utility on jump_host has been configured to work with the kube
 
 SOLUTION
 
+Commands used are
+
 #vi redis.yml
+
+Add the yaml file and save it 
 
 # kubectl create -f redis.yml
 
