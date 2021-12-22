@@ -22,6 +22,7 @@ Note: The kubectl utility on jump_host has been configured to work with the kube
 
 
 SOLUTION
+I made references to the k8 documentation and search for redis | configMap | Deployment. I used the information from the documentation page to create the yaml file.
 
 Commands used are
 
@@ -82,3 +83,9 @@ spec:
       - name: redis-config
         configMap:
           name: my-redis-config
+          
+          
+ 
+ #References
+ https://kubernetes.io/docs/tutorials/configuration/configure-redis-using-configmap/
+  
