@@ -1,0 +1,22 @@
+import requests
+import json
+body = {
+    "fields": {
+        "project":
+            {
+                "key": "BT"
+            },
+        "summary": "Test 1",
+        "description": "Creating of an issue using project keys and issue type names using the REST API",
+        "issuetype": {
+            "name": "Bug"
+        },"priority": {
+            "id": "2"
+        }
+    }
+}
+url = 'https://malwarebytes.atlassian.net/rest/api/2/issue/'
+headers = {"Content-Type": "application/json"}
+r = requests.post(url, auth=('user_email', 'api_token'), headers=headers, data=json.dumps(body))
+key = r.json()
+print(key)
