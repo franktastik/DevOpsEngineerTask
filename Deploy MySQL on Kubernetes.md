@@ -1,5 +1,5 @@
 
-
+## QUESTION
 A new MySQL server needs to be deployed on Kubernetes cluster. The Nautilus DevOps team was working on to gather the requirements. Recently they were able to finalize the requirements and shared them with the team members to start working on it. Below you can find the details:
 
 
@@ -58,6 +58,7 @@ or
 
 
 #Create the 
+
     kubectl create -f <filename.yaml>
 
 #Verify PersistentVolume, PersistentVolumeClaim and the pod
@@ -198,7 +199,8 @@ spec:
     app: mysql
     
 
-#References
+### References
+
 https://linoxide.com/deploy-mysql-on-kubernetes/
 https://phoenixnap.com/kb/kubernetes-mysql
 https://cloud.netapp.com/blog/how-to-set-up-mysql-kubernetes-deployments 
