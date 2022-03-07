@@ -1,3 +1,4 @@
+### QUESTION 
 
 The Nautilus application development team observed some performance issues with one of the application that is deployed in Kubernetes cluster. After looking into number of factors, the team has suggested to use some in-memory caching utility for DB service. After number of discussions, they have decided to use Redis. Initially they would like to deploy Redis on kubernetes cluster for testing and later they will move it to production. Please find below more details about the task:
 
@@ -21,27 +22,29 @@ Finally, redis-deployment should be in an up and running state.
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.
 
 
-SOLUTION
+### SOLUTION
 I made references to the k8 documentation and search for redis | configMap | Deployment. I used the information from the documentation page to create the yaml file.
 
 Commands used are
-
-#vi redis.yml
+```
+  vi redis.yml
+```
 
 Add the yaml file and save it 
+```
+  kubectl create -f redis.yml
 
-# kubectl create -f redis.yml
+  kubectl get all 
 
-# kubectl get all 
+  kubectl get configMap
 
-# kubectl get configMap
-
-# kubectl describe configMap
-
-
-
+  kubectl describe configMap
+```
 
 
+## YAML FILE
+
+```
 ---
 kind: ConfigMap
 apiVersion: v1
@@ -83,9 +86,10 @@ spec:
       - name: redis-config
         configMap:
           name: my-redis-config
-          
-          
+```
+
+           
+ ### References
  
- #References
  https://kubernetes.io/docs/tutorials/configuration/configure-redis-using-configmap/
   
