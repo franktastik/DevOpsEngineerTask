@@ -79,6 +79,8 @@ or
         
 ### Yaml file is here below 
 
+ ``` 
+
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -198,6 +200,9 @@ spec:
   selector:
     app: mysql
     
+    
+ ```
+
 
 ### References
 
