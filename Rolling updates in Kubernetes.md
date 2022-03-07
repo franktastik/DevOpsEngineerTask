@@ -1,16 +1,19 @@
-Question: We have an application running on Kubernetes cluster using nginx web server. The Nautilus application development team has pushed some of the latest changes and those changes need be deployed. The Nautilus DevOps team has created an image nginx:1.17 with the latest changes.
+### QUESTION: 
+
+We have an application running on Kubernetes cluster using nginx web server. The Nautilus application development team has pushed some of the latest changes and those changes need be deployed. The Nautilus DevOps team has created an image nginx:1.17 with the latest changes.
 Perform a rolling update for this application and incorporate nginx:1.17 image. The deployment name is nginx-deployment
 Make sure all pods are up and running after the update.
 
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.
 
 
-SOLUTION:
+### SOLUTION:
 
-#N.B: Searched the k8 documentation page and use the keyword = Rolling Updates nginx
-
+# N.B: Searched the k8 documentation page and use the keyword = Rolling Updates nginx
+```
   <deployment name> = nginx-deployment
   <container name> = nginx-container. 
+```
 
 #Check the deployment information. 
     
@@ -59,12 +62,12 @@ Or
 
 
 
-#References
+### References
 https://phoenixnap.com/kb/kubernetes-rolling-update 
 https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/
 https://www.containiq.com/post/kubernetes-rolling-update-deployment 
 
-#Benefits of Rolling Updates
+### Benefits of Rolling Updates
 Rolling updates allow changes to be integrated gradually, offering flexibility and control within an application lifecycle. Some benefits of using rolling updates for Kubernetes clusters include:
 
 -Ensures zero downtime since pod instances of the application are always running even during an upgrade
