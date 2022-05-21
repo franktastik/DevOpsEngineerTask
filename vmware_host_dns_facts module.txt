@@ -1,5 +1,7 @@
  # A simple module that gathers facts on the DNS configuration of your VMware ESXi hosts follows:
  
+ # we are setting the FQDN of the host to be esxi-host-01.my-domain.com and also configuring the host to use Google public DNS resolvers.
+ 
  - name: gather facts on dns config
   vmware_host_dns_facts:
     hostname: "{{ vsphere_host }}"
