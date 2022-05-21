@@ -1,0 +1,13 @@
+ # A simple module that gathers facts on the DNS configuration of your VMware ESXi hosts follows:
+ 
+ - name: gather facts on dns config
+  vmware_host_dns_facts:
+    hostname: "{{ vsphere_host }}"
+    username: "{{ vsphere_username }}"
+    password: "{{ vsphere_password }}"
+    validate_certs: "no"
+    cluster_name: "my_cluster"
+    
+    
+    
+    
